@@ -33,3 +33,9 @@ app.include_router(api_router)
 @app.get("/")
 async def root():
     return {"success": True, "data": {"name": "NDAOMS API"}}
+
+
+if __name__ == "__main__":
+    import uvicorn
+
+    uvicorn.run("app.main:app", host="127.0.0.1", port=8000, reload=True)
